@@ -3,7 +3,7 @@ var express = require('express');
 var nodemailer = require('nodemailer');
 
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport('smtps://lzhernandez96@gmail.com:izqjmdwegupqmvjd@smtp.gmail.com');
+var transporter = nodemailer.createTransport('smtps://<your email>@gmail.com:<your app password>.gmail.com');
 
 
 var router = express.Router();
@@ -21,7 +21,7 @@ router.post('/',function (req,res,next) {
 
   var mailOptions = {
     from: '"Web Contact Page" <' + email +'>', // sender address
-    to: '<lzhernandez96@gmail.com>', // list of receivers
+    to: '<youremail.com>', // list of receivers
     subject: 'Contact Form', // Subject line
     //text: 'Hello world 🐴', // plaintext body gmail accepts html so I won't bother
     html: '<b>'+ name  +' '+ lname + '</b>' +
