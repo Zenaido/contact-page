@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script type="text/javascript">
+  function ValidateEmail(form) {
+    var cmail = form.cemail.value;
+    var mail = form.email.value;
+    if (cmail === mail && mail != '' && cmail != '') {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(cmail)) {
+        alert("Email Validated");
+        return (true)
+      } else {
+        alert("You have entered an invalid email address!");
+        return (false)
+      }
+    }else{
+      alert("Please make sure you both email fields match and are valid");
+      return (false)
+    }
+  }
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+</head>
+
+<body id="homebody">
+<header>
+  <img src="images/logo.svg" height="37px"><div style="float: right"><nav id="topnav"><a href="about.html">About Us</a> <a href="contact.html" >Contact</a></nav></div>
+</header>
+
+<div class="aboutUs">
+  <p class="Title"> HOLD OUT A LITTLE LONGER</p>
+
+  <p class="BodyText" >Fill out the form below and will send you an email with a simple liability form for you to sign
+    After that, we ship you your free can of Kool-Aid, satisfaction guaranteed. We've never heard a bad word from our wonderful customers, because they already moved on to the afterlife!
+  </p>
+</div>
+
+<form name="info" method="post" onsubmit="return ValidateEmail(this)">
+  <input type="text" name="fName" placeholder="First Name" class="input1">
+  <input type="text" name="lName" placeholder="Last Name" class="input2">
+  <br>
+  <br>
+  <input type="email" name="email" placeholder="Email Address" style="width: 100%">
+  <br>
+  <br>
+  <input type="email" name="cemail" placeholder="Confirm Email Address" style="width: 100%">
+  <br>
+  <br>
+  <br>
+  <br>
+  <input type="submit" value="BRING ON THE AFTERLIFE" class="Button" >
+
+  <br>
+  <br>
+  <br>
+  <br>
+</form>
+
+
+</body>
+
+
+<footer><div class="topRow"> <div style="float: left;"><nav id="navf"> <a href="index.html">Home</a> <a href="about.html">About Us</a>  <a href="contact.html">Contact</a>  </nav></div>
+    <div style="float: right;"><img src="images/facebook.svg" class="social" >  <img src="images/twitter.svg" class="social"> <img src="images/instagram.svg" class="social"></div> </div>
+  <div class="BottomRow"> &#169; ShaedyCult 2016
+  </div>
+</footer>
+</html>
